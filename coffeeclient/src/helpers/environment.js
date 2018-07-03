@@ -5,6 +5,6 @@ switch(window.location.hostname) {
         APIURL = 'http://localhost:3000';
         break;
     case 'mrseiler-coffeeclient.herokuapp.com' :
-        APIRUL = 'https://mrseiler-coffeeapi.herokuapp.com'
+        APIURL = 'https://mrseiler-coffeeapi.herokuapp.com'
 }
 export default APIURL;
