@@ -57,7 +57,7 @@ class AddVendor extends Component {
                         </FormGroup>
                         <FormGroup>
                             <Label for="coffee">Coffee</Label>
-                            <Input id="coffee" type="text" name="coffee" value={this.state.coffee} placeholder="enter bean type" onChange={this.handleChange} />
+                            <Input id="coffee" type="text" name="coffee" value={this.state.coffee} placeholder="enter coffee sold" onChange={this.handleChange} />
                         </FormGroup>
                         <FormGroup>
                             <Label for="price">Price</Label>
