@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  background: url(./assets/coffee1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 60px;
+  padding: 0;
+}

@@ -1,0 +1,91 @@
+.nav {
+    background-color: rgb(223, 189, 126);
+    border-bottom: 1px solid brown;
+}
+.navbarBrand{
+    background-color: transparent;
+    color: black;
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 8px;
+    height: 80%;
+    text-decoration: none;
+}
+.navbarBrand:hover {
+    background-color: brown;
+    border: 1px solid brown;
+    color: rgb(223, 189, 126) !important;
+}
+.navbarBrand img{
+    height: 15px;
+    width: 15px;
+}
+.navbar {
+    border-bottom: none;
+    display: inline-block;
+    width: 100%;
+}
+.navbar Button{
+    background-color: transparent;
+    color: black;
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 8px;
+    height: 80%;
+}
+.navbar Button:hover {
+    background-color: brown;
+    border: 1px solid brown;
+    color: rgb(223, 189, 126);
+}
+.navbar .myaccount {
+    background-color: transparent;
+    color: black;
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 8px;
+    height: 100%;
+}
+.navbar .myaccount:hover {
+    background-color: brown;
+    border: 1px solid brown;
+    color: rgb(223, 189, 126);
+}
+.navbar .coffeebutton {
+    background-color: transparent;
+    color: black;
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 8px;
+    height: 100%;
+    margin-left: 4%;
+}
+.navbar .coffeebutton:hover {
+    background-color: brown;
+    border: 1px solid brown;
+    color: rgb(223, 189, 126);
+}
+.navbar .vendorbutton {
+    background-color: transparent;
+    color: black;
+    border: 1px solid brown;
+    border-radius: 10px;
+    padding: 8px;
+    height: 100%;
+    margin-left: 4%;
+}
+.navbar .vendorbutton:hover {
+    background-color: brown;
+    border: 1px solid brown;
+    color: rgb(223, 189, 126);
+}
+.navitems {
+    width: 90%;
+}
+.navbar .company {
+    display: inline-block;
+    margin-left: 15%;
+    color: rgb(102, 50, 20);
+    text-shadow: 2px 2px 10px brown;
+    border-bottom: 3px solid rgb(102, 50, 20);
+}

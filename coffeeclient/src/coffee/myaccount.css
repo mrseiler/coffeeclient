@@ -1,0 +1,73 @@
+.myaccountpage {
+    text-align: center;
+    background: linear-gradient(rgba(231, 173, 107, 0.9), rgba(128, 71, 19, 0.9));
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(231, 173, 107), 0 0 20px rgba(128, 71, 19);
+}
+.firstname {
+    display: block;
+}
+.firstname h3 {
+    display: inline-block;
+}
+.firstname p {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    margin: 5px;
+}
+.lastname {
+    display: block;
+}
+.lastname h3 {
+    display: inline-block;
+}
+.lastname p {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    margin: 5px;
+}
+.email {
+    display: block;
+}
+.email h3 {
+    display: inline-block;
+}
+.email p {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    margin: 5px;
+}
+.username {
+    display: block;
+}
+.username h3 {
+    display: inline-block;
+}
+.username p {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    margin: 5px;
+}
+.isvendor {
+    display: block;
+}
+.isvendor h3 {
+    display: inline-block;
+}
+.isvendor p {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    margin: 5px;
+}

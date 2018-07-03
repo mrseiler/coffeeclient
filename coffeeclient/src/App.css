@@ -1,0 +1,11 @@
+.footer {
+  background-color: rgb(223, 189, 126);
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  border-top: 1px solid brown;
+  bottom: 0;
+  display: block;
+  position: fixed;
+}
