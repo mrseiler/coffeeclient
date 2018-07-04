@@ -15,7 +15,8 @@ class Vendor extends Component{
         this.state = {
           vendor: [],
           showPopup: false,
-          loaded: false
+          loaded: false,
+          isVendor: false
         }
     }
     togglePopup() {

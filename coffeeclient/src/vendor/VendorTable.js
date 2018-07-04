@@ -19,10 +19,10 @@ const VendorTable = (props) => {
                                 <br />
                                 <div className="vendorinfo">
                                 <img src={require('../assets/vendorimage.jpg')} />
-                                <p><b>Coffee Sold: </b> {vendor.coffee} </p>
-                                <p><b>Price / Pound: </b> {vendor.price} </p>
-                                <p><b>Email: </b>{vendor.email} </p>
-                                <p><b>Creator: </b>{vendor.vendorCreator} </p>
+                                    <p><b>Coffee Sold: </b> {vendor.coffee} </p>
+                                    <p><b>Price / Pound: </b> {vendor.price} </p>
+                                    <p><b>Email: </b>{vendor.email} </p>
+                                    <p><b>Creator: </b>{vendor.vendorCreator} </p>
                                 </div>
                                 <h4>Contact Us</h4>
                             </div>

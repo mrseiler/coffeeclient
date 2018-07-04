@@ -27,10 +27,6 @@ const MyAccount = (props) => {
                         <h3>Username:</h3>
                         <p> &emsp;{props.username}&emsp;</p>
                         </div>
-                        <div className="isvendor">
-                        <h3>Vendor:</h3>
-                        <p> &emsp;Yes&emsp;</p>
-                        </div>
                     </div>
                 </Col>
             </Row>

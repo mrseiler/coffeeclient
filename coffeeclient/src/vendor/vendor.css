@@ -74,8 +74,8 @@
     width: 50%;
 }
 .individualvendor img{
-    height: 10%;
-    width: 30%;
+    height: 10em;
+    width: 20em;
     position: absolute;
     margin-left: 50%;
     border-radius: 5px;

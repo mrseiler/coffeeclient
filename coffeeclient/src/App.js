@@ -20,7 +20,8 @@ class App extends Component {
       lastName: '',
       username: '',
       email: '',
-      id: ''
+      id: '',
+      isVendor: false
     }
   }
   userName = (valueFromChildComponent) => {
@@ -59,6 +60,9 @@ class App extends Component {
 
     const email = localStorage.getItem('email');
     this.setState({email: email});
+
+    const isVendor = localStorage.getItem('isVendor');
+    this.setState({isVendor: isVendor});
   }
   setFirstName = (fName) => {
     localStorage.setItem('fName', fName);
@@ -75,6 +79,10 @@ class App extends Component {
   setEmail = (email) => {
     localStorage.setItem('email', email);
     this.setState({email: email});
+  }
+  setisVendor = (isVendor) => {
+    localStorage.setItem('isVendor', isVendor);
+    this.setState({isVendor: isVendor});
   }
 
   setSessionState = (token) => {
@@ -104,10 +112,10 @@ class App extends Component {
           <Coffee sessionToken={this.state.sessionToken} username={this.state.username}/>
         </Route>
         <Route path='/vendor' exact>
-          <Vendor sessionToken={this.state.sessionToken} username={this.state.username} />
+          <Vendor sessionToken={this.state.sessionToken} username={this.state.username} isVendor={this.state.isVendor} />
         </Route>
         <Route path='/myaccount' exact>
-          <MyAccount sessionToken={this.state.sessionToken} firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} username={this.state.username} />
+          <MyAccount sessionToken={this.state.sessionToken} firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} username={this.state.username} isVendor={this.state.isVendor} />
         </Route>
       </Switch>
     )

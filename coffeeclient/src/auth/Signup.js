@@ -44,7 +44,7 @@ class Signup extends Component {
             this.props.usernameFromApp(this.state.username);
         }) 
         .catch(error => {
-            {alert('No Bueno');}
+            {alert('Error filling out form');}
             //this.cancelCourse();
             return Promise.reject();
         })
@@ -62,49 +62,22 @@ class Signup extends Component {
                                 <FormGroup>
                                     <Label for="first_name">First Name</Label>
                                     <Input id="firstName" className="form-control" type="text" name="first_name" placeholder="enter first name" onChange={this.handleChange} required />
-                                    <div className="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div className="invalid-feedback">
-                                        Please enter your first name
-                                    </div>
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="last_name">Last Name</Label>
                                     <Input id="lastName" className="form-control" type="text" name="last_name" placeholder="enter last name" onChange={this.handleChange} required />
-                                    <div className="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                    <div className="invalid-feedback">
-                                        Please enter your last name
-                                    </div>
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="email">Email</Label>
                                     <Input id="email" type="text" className="form-control" name="email" placeholder="enter valid email" onChange={this.handleChange} required />
-                                    <div className="valid-feedback">
-                                    </div>
-                                    <div className="invalid-feedback">
-                                        Please enter your email
-                                    </div>
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="username">Username (5-20 Characters)</Label>
                                     <Input id="username" className="custom-control-label" type="text" name="username" placeholder="enter username" onChange={this.handleChange} required/>
-                                    <div className="valid-feedback">
-                                    </div>
-                                    <div className="invalid-feedback">
-                                        Please enter a username
-                                    </div>
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="password">Password (6-30 characters)</Label>
                                     <Input id="su_password" type="password" className="form-control" name="password" placeholder="enter password" onChange={this.handleChange} required/>
-                                    <div className="valid-feedback">
-                                    </div>
-                                    <div className="invalid-feedback">
-                                        Please enter a password
-                                    </div>
                                 </FormGroup>
                                 <Button type="submit"> Submit </Button>
                                 <Button className="change" onClick={this.props.changeUserStatus}>Already have an account?</Button>
