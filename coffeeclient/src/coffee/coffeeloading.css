@@ -1,7 +1,7 @@
 .coffeeloader{ 
     height: 50px;
     width: 40px;
-    margin-top: 20%;
+    margin-top: 12%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background: linear-gradient(to bottom left,#f7941e,#fc9619);
@@ -50,5 +50,47 @@
   }
 .loadingarea h3{
     text-align: center;
-    margin-top: 60px;
+    margin-top: 5%;
+    text-shadow: 2px 2px 5px white;
+}
+.loading {
+  position:absolute;
+  top:72%;
+  left:60%;
+  transform:translateY(-50%) translateX(-50%);
+  color: brown;
+}
+
+.object {
+  animation:scaling 2s infinite;
+  -webkit-animation:scaling 2s infinite; 
+  width: 10px;
+  height: 10px;
+  background-color: brown;
+  display:inline-block;
+  border-radius: 50% 50% 50% 50%;
+  opacity:1;
+}
+.object_two {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.object_three {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+    
+@-webkit-keyframes scaling {
+    75% { 
+      -webkit-transform:  scale(0.8);
+      opacity:0.4;
+    }
+}
+
+@keyframes scaling {
+    75% { 
+      transform: scale(0.8);
+      opacity:0.4;
+    }
 }

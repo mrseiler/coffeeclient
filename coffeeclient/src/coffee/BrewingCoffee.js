@@ -42,6 +42,9 @@ class BrewingCoffee extends Component {
                 addedBy: this.props.username
             })
         })
+        .catch(error => {
+            return Promise.reject();
+        })
     }
 
     render() {

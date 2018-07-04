@@ -100,6 +100,17 @@
     background: transparent;
     color: black;
 }
+.coffee .showallcoffee {
+    margin-top: 6em;
+    text-decoration: none;
+    background: brown;
+    font-weight: 20px;
+    position: fixed;
+}
+.coffee .showallcoffee:hover {
+    background: transparent;
+    color: black;
+}
 
 .brew{
     padding-top: 5px;
@@ -137,6 +148,9 @@
     color: rgb(117, 82, 30);
     background: white;
     border: 1px solid white;
+}
+.individualcoffee .fillerButton {
+    visibility: hidden;
 }
 .space {
     white-space: pre-wrap;

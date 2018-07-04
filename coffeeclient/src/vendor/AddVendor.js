@@ -42,6 +42,11 @@ class AddVendor extends Component {
                 vendorCreator: this.props.username
             })
         })
+        .catch(error => {
+            {alert('No Bueno');}
+            //this.cancelCourse();
+            return Promise.reject();
+        })
     }
 
     render() {
@@ -53,19 +58,20 @@ class AddVendor extends Component {
                     <Form onSubmit={this.handleSubmit} >
                         <FormGroup>
                             <Label for="name">Name</Label>
-                            <Input id="name" type="text" name="name" value={this.state.name} placeholder="enter vendor name" onChange={this.handleChange} />
+                            <Input id="name" type="text" name="name" value={this.state.name} placeholder="enter vendor name" onChange={this.handleChange} required/>
                         </FormGroup>
                         <FormGroup>
-                            <Label for="coffee">Coffee</Label>
-                            <Input id="coffee" type="text" name="coffee" value={this.state.coffee} placeholder="enter coffee sold" onChange={this.handleChange} />
+                            <Label for="coffee">Coffee Sold</Label>
+                            <Input type="text" name="coffee" id="coffee" value={this.state.coffee} onChange={this.handleChange} placeholder="enter coffee sold" required>
+                            </Input> 
                         </FormGroup>
                         <FormGroup>
                             <Label for="price">Price</Label>
-                            <Input id="price" type="text" name="price" value={this.state.price} placeholder="enter price of coffee per pound" onChange={this.handleChange} />
+                            <Input id="price" type="text" name="price" value={this.state.price} placeholder="enter price of coffee per pound" onChange={this.handleChange} required/>
                         </FormGroup>
                         <FormGroup>
                             <Label for="email">Email</Label>
-                            <Input id="email" type="text" name="email" value={this.state.email} placeholder="enter vendor email" onChange={this.handleChange} />
+                            <Input id="email" type="text" name="email" value={this.state.email} placeholder="enter vendor email" onChange={this.handleChange} required/>
                         </FormGroup>
                         <Button type="submit" color="primary"> Submit </Button>
                         <Button onClick={this.props.closePopup} className="exit">x</Button>

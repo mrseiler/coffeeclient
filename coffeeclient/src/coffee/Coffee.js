@@ -48,6 +48,7 @@ class Coffee extends Component{
         .then((res) => res.json())
         .then((logData) => {
             return this.setState({ coffee: logData })
+            
         })
     }
     
@@ -62,10 +63,6 @@ class Coffee extends Component{
         })
           .then((res) => {
               this.fetchCoffee();
-          })
-          .catch(error => {
-            {alert('Something is a miss');}
-            return Promise.reject();
           })
       }
       
@@ -89,8 +86,9 @@ class Coffee extends Component{
             updatePressed: true
         })
     }
-    handleSearch = (event) => {
-        fetch(`${APIURL}/coffee/singlecoffee/${this.searchName}`, {
+    fetchSearchCoffee = () => {
+        LoadingService.load(v => this.setState({loaded: true}))
+        fetch(`${APIURL}/coffee/singlecoffee/${this.state.searchName}`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -99,15 +97,19 @@ class Coffee extends Component{
     })
         .then((res) => res.json())
         .then((logData) => {
-            console.log(this.state.coffee)
             return this.setState({ coffee: logData })
         })
+    }
+    handleSearch = (event) => {
+        this.setState({isSearch: true})
+        this.fetchSearchCoffee();
     }
 
     render() {
         const coffeetable = this.state.coffee.length >= 1 ?    
         <CoffeeTable coffee={this.state.coffee}
-         delete={this.coffeeDelete} update={this.setUpdatedCoffee} username={this.props.username}/> : <h2 className='brew'>Brew some coffee</h2>;
+         delete={this.coffeeDelete} update={this.setUpdatedCoffee} username={this.props.username} /> : <h2 className='brew'>No Results Found</h2>;
+
 
         return (
             <div className="coffee">
@@ -115,14 +117,16 @@ class Coffee extends Component{
                 <Row>
                     <Col md="3" className="leftcolumn">
                         <div className="searchstuff">
-                            <Input className="bar" type="text" name="searchNname" id="name" placeholder="Search by name" onChange={this.handleChange} />
+                            <Input className="bar" type="text" name="searchName" id="searchName" placeholder="Search by name" onChange={this.handleChange} />
                             <Input className="search" type="submit" value="Search" onClick={this.handleSearch}/>
                         </div>
                         <Button className="makecoffee" onClick={this.togglePopup.bind(this)}>Add your own coffee</Button>
+                        <Button className="showallcoffee" onClick={this.fetchCoffee}>See all coffee</Button>
                             {this.state.showPopup ? 
                             <BrewingCoffee token={this.props.token} updateCoffeeArray={this.fetchCoffee} username={this.props.username} closePopup={this.togglePopup.bind(this)} />
                             : null
                             }
+                            
                     </Col>
                 <Col md="8">
                     {this.state.loaded ? coffeetable : <CoffeeLoading />}
