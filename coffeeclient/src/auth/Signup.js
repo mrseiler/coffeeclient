@@ -44,11 +44,11 @@ class Signup extends Component {
             this.props.emailFromApp(this.state.email);
             this.props.usernameFromApp(this.state.username);
         }) 
-        .catch(error => {
+       /* .catch(error => {
             {alert('No Bueno');}
             //this.cancelCourse();
             return Promise.reject();
-        })
+        })*/
         event.preventDefault()
     }
 
