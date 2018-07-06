@@ -89,7 +89,7 @@ class Coffee extends Component{
     fetchSearchCoffee = () => {
         LoadingService.load(v => this.setState({loaded: true}))
         fetch(`${APIURL}/coffee/singlecoffee/${this.state.searchName}`, {
-            method: 'GET',
+            method: 'POST',
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
